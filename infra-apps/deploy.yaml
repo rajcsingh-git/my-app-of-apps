@@ -14,10 +14,10 @@ spec:
         app: multitool1
     spec:
       containers:
-#        - image: wbitt/network-multitool
-        - image: rajcs/http_test:latest
-          #name: multitool1
-          name: rajcs_docker_image_http_test
+        - image: wbitt/network-multitool
+#        - image: rajcs/http_test:latest
+          name: multitool1
+          #name: rajcs_docker_image_http_test
           ports:
           - containerPort: 80
 
