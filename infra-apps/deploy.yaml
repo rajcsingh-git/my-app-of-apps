@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test1-multi-pod
+  namespace: test1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: multitool1
+  template:
+    metadata:
+      labels:
+        app: multitool1
+    spec:
+      containers:
+        - image: wbitt/network-multitool
+          name: multitool1
+          ports:
+          - containerPort: 80
+

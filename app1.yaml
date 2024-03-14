@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app1
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/rajcsingh-git/my-app-of-apps.git
+    targetRevision: HEAD
+    path: infra-apps
+  destination:
+    server: https://kubernetes.default.svc
+  
