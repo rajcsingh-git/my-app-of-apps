@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: default
+  project: infra-proj
   source:
     path: infra-apps
     repoURL: https://github.com/rajcsingh-git/my-app-of-apps.git
