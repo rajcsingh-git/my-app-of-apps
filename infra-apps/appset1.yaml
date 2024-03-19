@@ -34,4 +34,4 @@ spec:
         path: /
       destination:
         server: '{{url}}'
-        namespace: dest-gh-weekly
+        namespace: gh-weekly-test
