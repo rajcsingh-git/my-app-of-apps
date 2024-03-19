@@ -16,11 +16,15 @@ spec:
   destinations:   
    - namespace: nginx-ingress 
      server: '*' 
-   - namespace: nginx-plus-ingress 
+   - namespace: nginx 
      server: '*' 
    - namespace: argocd 
      server: '*' 
    - namespace: cluster-monitoring
+     server: '*'
+   - namespace: multitool
+     server: '*'
+   - namespace: kube-prometheus
      server: '*'
  
   clusterResourceWhitelist: 
