@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha
 kind: ApplicationSet
 metadata:
-  name: nginx-across-clusters
+  name: githb-weekly-across-clusters
   namespace: argocd
 spec:
   generators:
@@ -17,7 +17,7 @@ spec:
   template:
     metadata:
       name: '{{cluster}}-nginx'
-      namespace: nginx-test
+      namespace: gh-weekly-test
     spec:
       project: infra-proj
       syncPolicy:
@@ -27,10 +27,10 @@ spec:
       syncOptions:
         - CreateNamespace=true
       source:
-        repoURL: nginx
+        repoURL: https://github.com/headllines/github-weekly
         #repoURL: https://github.com/christianh814/gitops-examples
         targetRevision: master
         #path: applicationsets/list-generator/overlays/{{cluster}}
       destination:
         server: '{{url}}'
-        namespace: dest-nginx
+        namespace: dest-gh-weekly
