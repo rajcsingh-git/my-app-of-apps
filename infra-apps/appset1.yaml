@@ -31,6 +31,7 @@ spec:
         #repoURL: https://github.com/christianh814/gitops-examples
         targetRevision: master
         #path: applicationsets/list-generator/overlays/{{cluster}}
+        path: /
       destination:
         server: '{{url}}'
         namespace: dest-gh-weekly
